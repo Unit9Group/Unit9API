@@ -4,8 +4,10 @@ using AutoApi.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.Configure<AutoDatabaseSettings>(builder.Configuration.GetSection(nameof(AutoDatabaseSettings.DatabaseName)));
+builder.Services.Configure<VehiclesDatabaseSettings>(builder.Configuration.GetSection("VehiclesDatabase"));
 builder.Services.AddSingleton<TruckService>();
+builder.Services.AddSingleton<CarService>();
+builder.Services.AddSingleton<MotorcycleService>();
 
 builder.Services.AddControllers()
      .AddJsonOptions(
