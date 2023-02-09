@@ -9,16 +9,16 @@ public class CarService
     private readonly IMongoCollection<Car> _carsCollection;
 
     public CarService(
-        IOptions<AutoDatabaseSettings> autoDatabaseSettings)
+        IOptions<VehiclesDatabaseSettings> vehiclesDatabaseSettings)
     {
         var mongoClient = new MongoClient(
-            autoDatabaseSettings.Value.ConnectionString);
+            vehiclesDatabaseSettings.Value.ConnectionString);
 
         var mongoDatabase = mongoClient.GetDatabase(
-            autoDatabaseSettings.Value.DatabaseName);
+            vehiclesDatabaseSettings.Value.DatabaseName);
 
         _carsCollection = mongoDatabase.GetCollection<Car>(
-            autoDatabaseSettings.Value.AutoCollectionName);
+            vehiclesDatabaseSettings.Value.CarsCollectionName);
     }
 
     public async Task<List<Car>> GetAsync() =>
