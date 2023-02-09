@@ -9,7 +9,7 @@ public class CarService
     private readonly IMongoCollection<Car> _carsCollection;
 
     public CarService(
-        IOptions<VehiclesDatabaseSettings> vehiclesDatabaseSettings)
+        IOptions<AutoDatabaseSettings> vehiclesDatabaseSettings)
     {
         var mongoClient = new MongoClient(
             vehiclesDatabaseSettings.Value.ConnectionString);
