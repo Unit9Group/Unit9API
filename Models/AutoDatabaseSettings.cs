@@ -1,6 +1,6 @@
 ﻿namespace AutoApi.Models
 {
-    public class VehiclesDatabaseSettings
+    public class AutoDatabaseSettings
     {
         public string ConnectionString { get; set; } = null!;
 

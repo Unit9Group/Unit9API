@@ -9,7 +9,7 @@ public class MotorcycleService
     private readonly IMongoCollection<Motorcycle> _motorcycleCollection;
 
     public MotorcycleService(
-        IOptions<VehiclesDatabaseSettings> vehiclesDatabaseSettings)
+        IOptions<AutoDatabaseSettings> vehiclesDatabaseSettings)
     {
         var mongoClient = new MongoClient(
             vehiclesDatabaseSettings.Value.ConnectionString);
