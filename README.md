@@ -1,5 +1,13 @@
 # Unit9API
 This is the API project for Unit 9 in Advanced C#, 2023.
+
+# Testing
+The app is configured to run on `localhost:7272`. You can make calls in Postman to test the API.
+NOTE: You may need to disable SSL verification for this to work. 
+- `https://localhost:7272/api/Truck`
+- `https://localhost:7272/api/Car`
+- `https://localhost:7272/api/Motorcycle`
+
 <<<<<<< Back-End
 =======
 

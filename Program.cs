@@ -17,21 +17,21 @@ builder.Services.AddControllers()
         options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 
-/*builder.WebHost.UseKestrel(serverOptions =>
+builder.WebHost.UseKestrel(serverOptions =>
 {
     //serverOptions.ListenAnyIP(7273);
     serverOptions.ListenAnyIP(7272, listenOptions => listenOptions.UseHttps());
-});*/
+});
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+   // app.UseSwagger();
+   // app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
