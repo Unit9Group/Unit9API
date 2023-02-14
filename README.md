@@ -1,6 +1,9 @@
 # Unit9API
 This is the API project for Unit 9 in Advanced C#, 2023.
 
+# Database Setup
+There is a Word document (MongoDBDoc.docx) that will contain the instructions to create and seed the MongoDB database. 
+
 # Testing
 The app is configured to run on `localhost:7272`. You can make calls in Postman to test the API.
 NOTE: You may need to disable SSL verification for this to work. 
