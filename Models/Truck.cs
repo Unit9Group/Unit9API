@@ -7,6 +7,8 @@ namespace AutoApi.Models
     public class Truck
     {
         [BsonId]
+        [JsonPropertyName("id")]
+        [BsonElement("id")]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 

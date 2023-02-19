@@ -6,7 +6,9 @@ namespace AutoApi.Models
 {
     public class Motorcycle
     {
+        [JsonPropertyName("id")]
         [BsonId]
+        [BsonElement("id")]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
